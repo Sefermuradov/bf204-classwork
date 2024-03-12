@@ -1,0 +1,46 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.box {
+  height: 100vh;
+  border: 3px solid red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+span {
+  text-transform: uppercase;
+  color: white;
+  font-size: 30px;
+}
+
+#big {
+  background-image: url("https://lh3.googleusercontent.com/drive-storage/AJQWtBPyoMzSZu9PdqUY2gZFgvLjAEL7pB8oEF7bH8Om3YMLjtHnGwkmGkFBUVs9pohSXdMSHrX-Esb86TY6u3omiVmnVO7zTMbUGwGMgOQ=h360");
+  background-attachment: fixed;
+}
+
+#folder {
+  background-image: url("https://lh3.googleusercontent.com/drive-storage/AJQWtBP4cZcQbmlgh73dHTz6jvbk8PfyUQ9L4Z3ThM_JVBwU-ohB7e88YOetb5wfMEHYhSgBza4Z-r5ZRmp6zRwzLp_E-pbx2uVXyV9ACzE=w1903-h953");
+  /* background-attachment: fixed; */
+}
+
+#small {
+  background-image: url("https://lh3.googleusercontent.com/drive-storage/AJQWtBPyoMzSZu9PdqUY2gZFgvLjAEL7pB8oEF7bH8Om3YMLjtHnGwkmGkFBUVs9pohSXdMSHrX-Esb86TY6u3omiVmnVO7zTMbUGwGMgOQ=h360");
+  background-attachment: fixed;
+}
+
+#gradient {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 0, 255),
+    yellow,
+    green,
+    rgb(0, 195, 255)
+  );
+}
