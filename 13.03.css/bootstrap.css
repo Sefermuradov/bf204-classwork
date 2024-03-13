@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+header {
+  background-color: rgb(255, 255, 255);
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 75px;
+}
+nav ul {
+  display: flex;
+  gap: 3rem;
+}
+
+nav a {
+  font-size: medium;
+  font-weight: 700;
+  color: black;
+  transition: 200ms;
+}
+
+li a:hover {
+  color: orange;
+}
+
+.logo a {
+  color: black;
+}
+
+#banner {
+  background: linear-gradient(
+      to bottom,
+      rgba(92, 77, 66, 0.8) 0%,
+      rgba(92, 77, 66, 0.8) 100%
+    ),
+    url("https://startbootstrap.github.io/startbootstrap-creative/assets/img/bg-masthead.jpg");
+  height: 100vh;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner {
+  text-align: center;
+}
+.banner h1 {
+  font-size: 58px;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.banner p {
+  font-size: 30px;
+  color: white;
+  margin-bottom: 60px;
+}
+
+button {
+  background-color: rgb(255, 94, 0);
+  width: 180px;
+  padding: 20px;
+  border-radius: 40px;
+  transition: 500ms;
+  color: white;
+  font-weight: 800;
+  border: none;
+}
+
+button:hover {
+  background-color: red;
+}
+
+#services {
+  padding: 4rem;
+}
+
+/* .services {
+  text-align: center;
+} */
+.services h1 {
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  margin-top: 60px;
+  margin-bottom: 60px;
+  text-align: center;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.card {
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid black;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.card h3 {
+  margin: 20px 0;
+  font-size: 30px;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card p {
+  font-size: 20px;
+}
+
+i {
+  color: rgb(255, 102, 0);
+  font-size: 50px;
+}
