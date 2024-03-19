@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar ul {
+  display: flex;
+  text-decoration: none;
+}
+nav {
+                      background-color: pink;
+  display: flex;
+}
