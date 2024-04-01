@@ -23,11 +23,3 @@
 // b = +window.prompt("enter your second num");
 // let faiz = (a / b * 100)
 // console.log(faiz)
-
-if (a % 7 == 0) {
-    console.log("number divided by 7")
-}
-else {
-    const reminder = a % 7;
-    if
-}
