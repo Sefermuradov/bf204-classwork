@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  border: 1px solid black;
+  width: 300px;
+  border-radius: 5px;
+}
+.card img {
+  width: 100%;
+}
+.card-body {
+  padding: 20px;
+}
+.card-body h5 {
+  font-size: 20px;
+  padding-bottom: 12px;
+}
+.card-body p {
+  padding-bottom: 25px;
+}
+/* .card-body a {
+  text-decoration: none;
+  color: white;
+  background-color: blue;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 17px;
+} */
