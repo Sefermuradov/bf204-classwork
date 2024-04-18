@@ -39,8 +39,10 @@
 
 //-------------------------------------------------------------------------
 import { BASE_URL } from "./base.js";
+import { deleteDataById } from "./services.js";
 const tbody = document.querySelector("tbody");
 const loader = document.querySelector(".loader");
+
 async function getData(endpoint) {
   // const response = await fetch(BASE_URL + endpoint);
   try {
@@ -52,7 +54,6 @@ async function getData(endpoint) {
     console.log(error);
   } finally {
     loader.classList.add("d-none");
-
   }
 }
 console.log(getData("suppliers"));
@@ -65,13 +66,22 @@ function drawList(array) {
   
     <td>${list.id}</td>
     <td>${list.companyName}</td>
-    <td>${list.address.street}</td>
-    <td>${list.address.phone}</td>
-    <td>${list.address.city}, ${list.address.country}</td>
+    <td>${list.address?.street}</td>
+    <td>${list.address?.phone}</td>
+    <td>${list.address?.city}, ${list.address?.country}</td>
     <td><a href="detail.html?id=${list.id}" class="btn btn-primary">details</a></td>
-    <td><a class="btn btn-success" href="">Edit</a></td>
-    <td><a class="btn btn-danger" href="">Delete</a></td>
+    <td><button class="btn btn-success" href="">Edit</button></td>
+    <td><button data-id=${list.id} class="btn btn-danger delete-btn" href="">Delete</button></td>
 
   </tr> `;
+  });
+
+  const deleteBtns = document.querySelectorAll(".delete-btn");
+  deleteBtns.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      const id = this.getAttribute("data-id");
+      deleteDataById(id);
+      this.closest("tr").remove();
+    });
   });
 }
