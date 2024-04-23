@@ -14,6 +14,7 @@ const goBAckBtn = document.querySelector(".go-back-btn");
 window.addEventListener("load", () => {
   getOne(endpoints.movies, id).then((res) => {
     const movie = res.data[0];
+    console.log(movie.description);
     img.setAttribute("src", movie.poster);
     img.setAttribute("alt", movie.title);
     img.setAttribute("title", movie.title);

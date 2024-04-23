@@ -22,14 +22,14 @@ function renderCards(arr) {
   moviesWrapper.innerHTML = "";
   arr.forEach((movie) => {
     moviesWrapper.innerHTML += ` <div class="col-lg-3 col-md-6 col-sm-12"data-id=${movie.id} data-editing="false">
-        <div class="card">
+        <div class="card mt-5">
             <div class="card-img">
                 <img src="${movie.poster}" class="card-img-top" alt="${movie.title}" title="${movie.title}">
             </div>
             <div class="card-body">
-            <marquee class="card-title" direction="left"behavior="scroll" scrollamount="6">${movie.title}</marquee>
+            <marquee class="card-title" direction="left" behavior="scroll" scrollamount="6">${movie.title}</marquee>
                 <div class="d-flex justify-content-between mb-3">
-                    <button class="btn btn-outline-secondary ">click for trailer</button>
+                    <a href="${movie.trailerURL}" target="_blank"       class="btn btn-outline-secondary ">click for trailer</a>
                     <br>
                     <div class="age">
                         <span>${movie.ageRestriction}+</span>
@@ -44,6 +44,10 @@ function renderCards(arr) {
                 </button>
                 <button class="btn btn-outline-danger delete-btn">
                     <i class="fa-solid fa-trash"></i>
+                </button>
+                </button>
+                <button} class="btn btn-outline-danger wish-btn">
+                    <i class="fa-regular fa-heart"></i> 
                 </button>
             </div>
         </div>
@@ -92,11 +96,41 @@ function renderCards(arr) {
         this.closest(".col-lg-3").setAttribute("data-editing", "true");
       });
     });
+
+    const wishBtns = document.querySelectorAll(".wish-btn");
+    wishBtns.forEach((wishBtn) => {
+      wishBtn.addEventListener("click", function () {
+        const favicon = this.querySelector(".fa-heart");
+        const id = this.getAttribute("data-id");
+        if (favicon.className == "fa-regular fa-heart") {
+          favicon.className = "fa-solid fa-heart";
+        } else {
+          favicon.className = "fa-regular fa-heart";
+        }
+        const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+        const favIndex = favorites.findIndex((item) => item == id);
+        console.log(favIndex);
+        if (favIndex === -1) {
+          favorites.push(id);
+        } else {
+          favorites.splice(favIndex, 1);
+        }
+        localStorage.setItem("favorites", JSON.stringify(favorites));
+        Swal.fire({
+          position: "top-end",
+          icon: "success",
+          title: "Your work has been saved",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+      });
+    });
   });
 }
 
-editForm.addEventListener("submit", function (e) {
+editForm.addEventListener("submit", async function (e) {
   e.preventDefault();
+  console.log("edit form submit tets");
   const cards = document.querySelectorAll(".col-lg-3");
   let id;
   Array.from(cards).map((card) => {
@@ -115,5 +149,6 @@ editForm.addEventListener("submit", function (e) {
     trailerURL: trailerURLInp.value,
     descripton: descTextArea.value,
   };
-  update(endpoints.movies, id, updatedMovie);
+  await update(endpoints.movies, id, updatedMovie);
+  renderCards();
 });
