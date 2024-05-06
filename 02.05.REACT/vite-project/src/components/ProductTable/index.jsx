@@ -12,7 +12,6 @@ const Tablee = () => {
   useEffect(() => {
     getAll(endpoint.products)
       .then((response) => {
-        console.log(response);
         setData(response);
       })
       .catch((error) => {
