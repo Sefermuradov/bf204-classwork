@@ -1,0 +1,53 @@
+{
+  "movies": [
+    {
+      "id": "1",
+      "title": "Doctor Strange",
+      "posterImg": "https://m.media-amazon.com/images/I/81b6gyv977L._AC_UF894,1000_QL80_.jpg",
+      "releaseYear": 2016,
+      "genre": "Action, Superhero"
+    },
+    {
+      "id": "2",
+      "title": "Fury",
+      "posterImg": "https://www.arthipo.com/image/cache/catalog/poster/movie/1555-2059/pfilm1635-fury-1000x1000.webp",
+      "releaseYear": 2014,
+      "genre": "War"
+    },
+    {
+      "id": "3",
+      "title": "Sherlock",
+      "posterImg": "https://m.media-amazon.com/images/M/MV5BMWEzNTFlMTQtMzhjOS00MzQ1LWJjNjgtY2RhMjFhYjQwYjIzXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+      "releaseYear": 2010,
+      "genre": "Detective"
+    },
+    {
+      "id": "4",
+      "title": "Dark",
+      "posterImg": "https://upload.wikimedia.org/wikipedia/en/d/da/DarkNetflixPosterEnglish.jpg",
+      "releaseYear": 2017,
+      "genre": "Thriller"
+    },
+    {
+      "id": "5",
+      "title": "Fury",
+      "posterImg": "https://www.arthipo.com/image/cache/catalog/poster/movie/1555-2059/pfilm1635-fury-1000x1000.webp",
+      "releaseYear": 2014,
+      "genre": "War"
+    },
+    {
+      "id": "6",
+      "title": "Sherlock",
+      "posterImg": "https://m.media-amazon.com/images/M/MV5BMWEzNTFlMTQtMzhjOS00MzQ1LWJjNjgtY2RhMjFhYjQwYjIzXkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_.jpg",
+      "releaseYear": 2010,
+      "genre": "Detective"
+    },
+    {
+      "id": "7",
+      "title": "Doctor Strange",
+      "posterImg": "https://m.media-amazon.com/images/I/81b6gyv977L._AC_UF894,1000_QL80_.jpg",
+      "releaseYear": 2016,
+      "genre": "Action, Superhero"
+    }
+  ]
+}
