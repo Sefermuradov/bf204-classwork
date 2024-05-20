@@ -1,0 +1,58 @@
+#shop-image {
+    background-image: url(https://preview.colorlib.com/theme/selling/images/hero_2.jpg.webp);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    .hero {
+        h2 {
+            font-size: 80px;
+            color: white;
+            margin-bottom: 10px;
+
+        }
+
+        p {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 48px;
+        }
+    }
+
+    .buttons {
+        display: flex;
+        column-gap: 5px;
+        
+
+        .right {
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            padding: 15px;
+            font-weight: 700;
+            transition: 0.3s;
+
+
+            &:hover {
+                color: black;
+                background-color: white;
+            }
+        }
+
+        .left {
+            background-color: white;
+            color: black;
+            padding: 15px;
+            font-weight: 700;
+            border: none;
+            transition: 0.3s;
+
+            &:hover {
+                color: white;
+                background-color: transparent;
+                border: 2px solid white;
+
+            }
+        }
+    }
+}
