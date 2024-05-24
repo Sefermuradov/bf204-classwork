@@ -1,0 +1,44 @@
+.card {
+  // height: 500px;
+  // width: 270px;
+  // border: 1px solid red;
+  .cardimg {
+    width: 100%;
+    img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+    }
+  }
+  .cardbody {
+    padding: 20px;
+    text-align: center;
+    h2 {
+      font-size: 24px;
+      font-weight: 500;
+      color: #fd5f00;
+      margin-bottom: 15px;
+    }
+    .price {
+      color: black;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    P {
+      color: #939393;
+      margin-bottom: 15px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      button {
+        display: flex;
+        align-items: center;
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}
